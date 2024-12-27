@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Commerce Review and Rating</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f8f8f8; padding: 20px; }
+        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .product { margin-bottom: 20px; }
+        .review-form { margin-bottom: 40px; }
+        .review-form label, .review-form input, .review-form textarea { display: block; width: 100%; margin-bottom: 10px; }
+        .button { background-color: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+        .button:hover { background-color: #45a049; }
+        .review-list { margin-top: 20px; }
+        .review-item { border-bottom: 1px solid #ddd; padding: 10px 0; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="product">
+        <h2>Product Title</h2>
+        <p>Description of the product goes here. It can include details like features, price, and any other relevant information.</p>
+    </div>
+
+    <div class="review-form">
+        <h3>Submit Your Review</h3>
+        <form action="/submit_review" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="rating">Rating</label>
+            <input type="number" id="rating" name="rating" min="1" max="5" required>
+
+            <label for="review">Review</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+
+            <button type="submit" class="button">Submit Review</button>
+        </form>
+    </div>
+
+    <div class="review-list">
+        <h3>Customer Reviews</h3>
+        <div class="review-item">
+            <strong>John Doe</strong> <span>★ ★ ★ ★ ★</span>
+            <p>Great product! Highly recommend.</p>
+        </div>
+        <div class="review-item">
+            <strong>Jane Smith</strong> <span>★ ★ ★ ★</span>
+            <p>Very good, but could be improved.</p>
+        </div>
+        <!-- Additional reviews can be added here -->
+    </div>
+</div>
+
+</body>
+</html>
+
